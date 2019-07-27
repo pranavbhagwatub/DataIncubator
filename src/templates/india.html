@@ -1,0 +1,628 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>        
+        <!-- META SECTION -->
+        <title>Shodh - Political event summarizer</title>            
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        
+        <link rel="icon" href="favicon.ico" type="image/x-icon" />
+        <!-- END META SECTION -->
+        
+        <!-- CSS INCLUDE -->        
+        <link rel="stylesheet" type="text/css" id="theme" href="static/css/theme-default.css"/>
+		<link rel="stylesheet" type="text/css" id="theme" href="static/css/pagination-css.css"/>
+        <!-- EOF CSS INCLUDE --> 
+
+	<style>
+	.table > thead > tr > th,
+	.table > tbody > tr > th,
+	.table > tfoot > tr > th,
+	.table > thead > tr > td,
+	.table > tbody > tr > td,
+	.table > tfoot > tr > td {
+	  border-color: #0000001c;
+	  padding: 16px 20px;
+	  background: #FFFFFF;
+	  color: #656C78;
+	  font-size: 13px;
+}
+
+	</style>
+		
+    </head>
+    <body>
+        <div class="">
+            
+
+            
+            <!-- PAGE CONTENT -->
+            <div class="page-content" style="">
+                
+                <!-- START X-NAVIGATION VERTICAL -->
+                <ul class="x-navigation x-navigation-horizontal ">
+                    <!-- TOGGLE NAVIGATION -->
+                    <li class="xn-icon-button">
+                        <a href="#" class="x-navigation-minimize"><span class="fa fa-dedent"></span></a>
+                    </li>
+                    <!-- END TOGGLE NAVIGATION -->
+                           
+					<li>
+                        <a href="/IRF18P4/resultsPageAnalysis"><span class="fa fa-bar-chart-o"></span> <span class="xn-text">Home</span></a>
+                        
+                    </li>
+                </ul>
+                <!-- END X-NAVIGATION VERTICAL -->                     
+
+                 
+                
+                <!-- PAGE CONTENT WRAPPER -->
+                <div class="page-content-wrap" style="padding-top:5%">
+                    
+		
+					
+                    
+                    <div class="row">
+					<div class="col-md-2">
+                            <div class="panel panel-default">
+							<div class="panel-heading">
+                                    <div class="panel-title-box">
+                                        <h3>Filters</h3>
+                                    </div>                                     
+                                    <ul class="panel-controls panel-controls-title">                                        
+										<li><a href="#" class="panel-collapse"><span class="fa fa-angle-down"></span></a></li>
+                                    </ul>                                    
+                                    
+                                </div>
+                                <div class="panel-body">
+                                    
+                                    <div class="form-group">
+									<h3>Date<h3>
+									<div id=dateFilterList>
+									
+										<div class="col-md-12"> 
+										<input type="checkbox" id="checkBoxYesterday" onclick="languageFilter(this);" name="Yesterday" value="04/27/2019"> Last 24 hours
+										</div>
+										<div class="col-md-12"> 
+										<input type="checkbox" id="checkBoxLastTwoDays" onclick="languageFilter(this);" name="LastTwoDays" value="04/26/2019"> Last 2 days
+										</div>
+										<div class="col-md-12"> 
+										<input type="checkbox" id="checkBoxLastWeek" onclick="languageFilter(this);" name="LastWeek" value="04/18/2019"> Last week
+										</div>
+										<hr>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                        </div>
+						
+					
+
+							<!-- START WIDGET REGISTRED -->
+                            <div class="widget widget-default widget-item-icon" onclick="location.href='pages-address-book.html';">
+                                <div class="widget-item-left">
+                                    <span class="fa fa-tag"></span>
+                                </div>
+                                <div class="widget-data">
+                                    <div class="widget-int num-count"><span id="numRiots"></span></div>
+                                    <div class="widget-title">Riots</div>
+                                </div>
+                                <div class="widget-controls">                                
+                                    <a href="#" class="widget-control-right widget-remove" data-toggle="tooltip" data-placement="top" title="Remove Widget"><span class="fa fa-times"></span></a>
+                                </div>                            
+                            </div>                            
+                            <!-- END WIDGET REGISTRED -->
+							<!-- START WIDGET REGISTRED -->
+                            <div class="widget widget-default widget-item-icon" onclick="location.href='pages-address-book.html';">
+                                <div class="widget-item-left">
+                                    <span class="fa fa-tag"></span>
+                                </div>
+                                <div class="widget-data">
+                                    <div class="widget-int num-count"><span id="numProtest"></span></div>
+                                    <div class="widget-title">Protests</div>
+                                </div>
+                                <div class="widget-controls">                                
+                                    <a href="#" class="widget-control-right widget-remove" data-toggle="tooltip" data-placement="top" title="Remove Widget"><span class="fa fa-times"></span></a>
+                                </div>                            
+                            </div>                            
+                            <!-- END WIDGET REGISTRED -->
+							<!-- START WIDGET REGISTRED -->
+                            <div class="widget widget-default widget-item-icon" onclick="location.href='pages-address-book.html';">
+                                <div class="widget-item-left">
+                                    <span class="fa fa-tag"></span>
+                                </div>
+                                <div class="widget-data">
+                                    <div class="widget-int num-count"><span id="numViolence"></span></div>
+                                    <div class="widget-title">Violence Against Civilians</div>
+                                </div>
+                                <div class="widget-controls">                                
+                                    <a href="#" class="widget-control-right widget-remove" data-toggle="tooltip" data-placement="top" title="Remove Widget"><span class="fa fa-times"></span></a>
+                                </div>                            
+                            </div>                            
+                            <!-- END WIDGET REGISTRED -->
+							
+						
+					</div>
+
+						<div class="col-md-6">
+                            <div class="x-block">
+
+                                            <div class="x-block-content ">                                                                                                
+                                                <table class="table x-table ">
+														<thead>
+															<tr>
+																<th style="width:100%"></th>
+															</tr>
+														</thead>
+                                                    <tbody id="newsDetails">
+                                                </tbody></table>                                                
+                                            </div>
+                                        </div>
+										<div id="newsDetailsPagination">
+                                        </div>	
+                            
+                        </div>
+						<div class="col-md-4">
+                            <!-- START SALES BLOCK -->
+                            <div class="panel panel-default">
+                                <div class="panel-heading">
+                                    <div class="panel-title-box">
+                                        <h3>Distribution by Top 5 Cities</h3>
+                                    </div>                                     
+                                    <ul class="panel-controls panel-controls-title">                                        	                                
+                                        <li><a href="#" class="panel-fullscreen rounded"><span class="fa fa-expand"></span></a></li>
+										<li><a href="#" class="panel-collapse"><span class="fa fa-angle-down"></span></a></li>
+                                    </ul>                                    
+                                    
+                                </div>
+                                <div class="panel-body">                                    
+                                    <div class="row stacked">
+                                        <div class="col-md-12">
+                                            <div id="dashboard-map-sales" style="width: 100%; height: 200px"></div>
+                                        </div>
+                                        <div class="col-md-12">
+                                            <div id="morris-bar-cities" style="width: 100%; height: 200px"></div>
+                                        </div>
+                                    </div>                                    
+                                </div>
+                            </div>
+                            <!-- END SALES BLOCK -->
+                            <!-- START VISITORS BLOCK -->
+							<div class="panel panel-default">
+                                <div class="panel-heading">
+                                    <div class="panel-title-box">
+                                        <h3>Distribution by Top 5 Parties Involved</h3>
+                                    </div>                                     
+                                    <ul class="panel-controls panel-controls-title">                                        	                                
+                                        <li><a href="#" class="panel-fullscreen rounded"><span class="fa fa-expand"></span></a></li>
+										<li><a href="#" class="panel-collapse"><span class="fa fa-angle-down"></span></a></li>
+                                    </ul>                                    
+                                    
+                                </div>
+                                <div class="panel-body">                                    
+                                    <div class="row stacked">
+                                        <div class="col-md-12">
+                                            <div class="chart-holder" id="dashboard-donut-party" style="height: 200px;"></div>
+                                        </div>
+                                    </div>                                    
+                                </div>
+                            </div>
+                            <!-- END VISITORS BLOCK -->
+                            
+                        </div>
+                    
+
+                    
+                    <!-- START DASHBOARD CHART -->
+               
+                    <!-- END DASHBOARD CHART -->
+                    
+                </div>
+                <!-- END PAGE CONTENT WRAPPER -->                                
+            </div>            
+            <!-- END PAGE CONTENT -->
+        </div>        <!-- END PAGE CONTAINER -->
+
+        <!-- MESSAGE BOX-->
+        <div class="message-box animated fadeIn" data-sound="alert" id="mb-signout">
+            <div class="mb-container">
+                <div class="mb-middle">
+                    <div class="mb-title"><span class="fa fa-sign-out"></span> Log <strong>Out</strong> ?</div>
+                    <div class="mb-content">
+                        <p>Are you sure you want to log out?</p>                    
+                        <p>Press No if youwant to continue work. Press Yes to logout current user.</p>
+                    </div>
+                    <div class="mb-footer">
+                        <div class="pull-right">
+                            <a href="pages-login.html" class="btn btn-success btn-lg">Yes</a>
+                            <button class="btn btn-default btn-lg mb-control-close">No</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- END MESSAGE BOX-->
+
+        <!-- START PRELOADS -->
+        <audio id="audio-alert" src="static/audio/alert.mp3" preload="auto"></audio>
+        <audio id="audio-fail" src="static/audio/fail.mp3" preload="auto"></audio>
+        <!-- END PRELOADS -->                  
+        
+    <!-- START SCRIPTS -->
+        <!-- START PLUGINS -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script type="text/javascript" src="static/js/plugins/bootstrap/bootstrap.min.js"></script>        
+        <!-- END PLUGINS -->
+
+        <!-- START THIS PAGE PLUGINS-->        
+        <script type='text/javascript' src='static/js/plugins/icheck/icheck.min.js'></script>        
+        <script type="text/javascript" src="static/js/plugins/mcustomscrollbar/jquery.mCustomScrollbar.min.js"></script>
+        <script type="text/javascript" src="static/js/plugins/scrolltotop/scrolltopcontrol.js"></script>
+        
+        <script type="text/javascript" src="static/js/plugins/morris/raphael-min.js"></script>
+        <script type="text/javascript" src="static/js/plugins/morris/morris.min.js"></script>       
+        <script type="text/javascript" src="static/js/plugins/rickshaw/d3.v3.js"></script>
+        <script type="text/javascript" src="static/js/plugins/rickshaw/rickshaw.min.js"></script>
+        <script type='text/javascript' src='static/js/plugins/jvectormap/jquery-jvectormap-1.2.2.min.js'></script>
+        <script type='text/javascript' src='static/js/plugins/jvectormap/jquery-jvectormap-asia-mill.js'></script>                
+        <script type='text/javascript' src='static/js/plugins/bootstrap/bootstrap-datepicker.js'></script>                
+        <script type="text/javascript" src="static/js/plugins/owl/owl.carousel.min.js"></script>                 
+        
+        <script type="text/javascript" src="static/js/plugins/moment.min.js"></script>
+        <script type="text/javascript" src="static/js/plugins/daterangepicker/daterangepicker.js"></script>
+        <!-- END THIS PAGE PLUGINS-->        
+
+		<script type="text/javascript" src="static/js/pagination.js"></script>
+
+        <!-- START TEMPLATE -->
+        <script type="text/javascript" src="static/js/settings.js"></script>
+        
+        <script type="text/javascript" src="static/js/plugins.js"></script>        
+        <script type="text/javascript" src="static/js/actions.js"></script>
+        
+        <script type="text/javascript" src="static/js/demo_dashboard.js"></script>
+		<script type="text/javascript" src="static/js/taffy.js"></script>
+		
+        <!-- END TEMPLATE -->
+    <!-- END SCRIPTS -->         
+	
+	<script type="text/javascript">
+	var s = '{{data|tojson|safe}}';
+	var locCount = '{{locCount|tojson|safe}}';
+	var party = '{{partyData|tojson|safe}}';
+	var event = '{{eventCount|tojson|safe}}';
+	s = s.replace(/\\n/g, "\\n")  
+				   .replace(/\\'/g, "\\'")
+				   .replace(/\\"/g, '\\"')
+				   .replace(/\\&/g, "\\&")
+				   .replace(/\\r/g, "\\r")
+				   .replace(/\\t/g, "\\t")
+				   .replace(/\\b/g, "\\b")
+				   .replace(/\\f/g, "\\f");
+	s = s.replace(/[\u0000-\u0019]+/g,""); 
+	var jd = JSON.stringify(s);
+	var news = JSON.parse(jd);
+	var newsData = JSON.parse(news);
+	
+	//party Data
+	party = party.replace(/\\n/g, "\\n")  
+				   .replace(/\\'/g, "\\'")
+				   .replace(/\\"/g, '\\"')
+				   .replace(/\\&/g, "\\&")
+				   .replace(/\\r/g, "\\r")
+				   .replace(/\\t/g, "\\t")
+				   .replace(/\\b/g, "\\b")
+				   .replace(/\\f/g, "\\f")
+				   .replace(/[\u0000-\u0019]+/g,""); 
+	var pd = JSON.stringify(party);
+	var p = JSON.parse(pd);
+	var partyData = JSON.parse(p);
+	
+	//party Data
+	
+	locCount = locCount.replace(/\\n/g, "\\n")  
+				   .replace(/\\'/g, "\\'")
+				   .replace(/\\"/g, '\\"')
+				   .replace(/\\&/g, "\\&")
+				   .replace(/\\r/g, "\\r")
+				   .replace(/\\t/g, "\\t")
+				   .replace(/\\b/g, "\\b")
+				   .replace(/\\f/g, "\\f")
+				   .replace(/[\u0000-\u0019]+/g,""); 
+	var ld = JSON.stringify(locCount);
+	var l = JSON.parse(ld);
+	var lData = JSON.parse(l);
+	
+	
+	//event Data
+	event = event.replace(/\\n/g, "\\n")  
+				   .replace(/\\'/g, "\\'")
+				   .replace(/\\"/g, '\\"')
+				   .replace(/\\&/g, "\\&")
+				   .replace(/\\r/g, "\\r")
+				   .replace(/\\t/g, "\\t")
+				   .replace(/\\b/g, "\\b")
+				   .replace(/\\f/g, "\\f")
+				   .replace(/[\u0000-\u0019]+/g,""); 
+	var ed = JSON.stringify(event);
+	var e = JSON.parse(ed);
+	var eData = JSON.parse(e);
+	
+	
+	document.getElementById("numRiots").innerHTML = eData[1]["cnt"];
+	document.getElementById("numProtest").innerHTML = eData[0]["cnt"];
+	document.getElementById("numViolence").innerHTML = eData[2]["cnt"];
+	
+	
+	var filteredData =[];
+	$(document).ready(function(){
+	//var s = '{{data|tojson|safe}}';
+	// preserve newlines, etc - use valid JSON
+	/*s = s.replace(/\\n/g, "\\n")  
+				   .replace(/\\'/g, "\\'")
+				   .replace(/\\"/g, '\\"')
+				   .replace(/\\&/g, "\\&")
+				   .replace(/\\r/g, "\\r")
+				   .replace(/\\t/g, "\\t")
+				   .replace(/\\b/g, "\\b")
+				   .replace(/\\f/g, "\\f");
+	// remove non-printable and other non-valid JSON chars
+	s = s.replace(/[\u0000-\u0019]+/g,""); 
+	var jd = JSON.stringify(s);
+	var news = JSON.parse(jd);
+	var newsData = JSON.parse(news);
+	*/
+	var taffyData = TAFFY(newsData);
+	
+	/* Query result with pagination */
+	$('#newsDetailsPagination').pagination({
+		dataSource: newsData,
+		pageSize: 5,
+		callback: function(data, pagination) {
+			// template method of yourself
+			//var html = simpleTemplating(data);
+			//$('#tweetDetails').html(html);
+		$("#newsDetails").html('');
+		for (var i = 0; i < data.length; i++) 
+		{
+		$("#newsDetails").append('<tr>'+
+		'<td><b>'+data[i]['title'] +'</b><br>' + data[i]['summary']+'<br><b>Event Type: </b>'+data[i]['eventType']+'<br><b>Parties Inolved: </b>'
+		+data[i]['partiesInvolved']+'<br><span class="label label-default label-form" style="background-color: #ffffff;color:black;border: 2px solid #bababa;border-radius: 12px""><span class="fa fa-calendar-o"></span> '+data[i]['eventDate']+'</span> '
+		+'<span class="label label-default label-form" style="background-color: #ffffff;color:black;border: 2px solid #bababa;border-radius: 12px"><span class="fa fa-map-marker"></span> '+data[i]['location']+'</span></td></tr><hr>');
+
+		}
+		
+		}
+	});
+	/*
+	for (var i = 0; i < newsData.length; i++) 
+		{
+		$("#newsDetails").append('<tr>'+
+		'<td><span><b>' + newsData[i]['summary'] + '</b></td></tr>');
+		}*/
+	
+	
+
+/* END Query result with pagination */
+	
+	
+	//Map
+var cityList = [                                           
+    {latLng: [48.856613, 2.352222], name: lData[0][0]},
+    {latLng: [28.644800, 77.216721], name: lData[1][0]},   
+    {latLng: [40.712776, -74.005974], name: lData[2][0]},
+    {latLng: [23.033863, 72.585022], name: lData[3][0]},
+    {latLng: [34.083656, 74.797371], name: lData[4][0]}];
+var cityData = [];
+
+
+for (var i = 0; i < 5; i++) 
+{
+	//if(cities[i]=='nyc')
+	var nycCount = lData[0][1];
+	//else if(cities[i]=='mexico city')
+	var mexicoCount = lData[1][1];
+	//else if(cities[i]=='bangkok')
+	var bangkokCount = lData[2][1];
+	//else if(cities[i]=='delhi')
+	var delhiCount = lData[3][1];
+	//else if(cities[i]=='paris')
+	var parisCount = lData[4][1];
+	//else
+	//{}
+	
+	
+	
+}
+
+for(var j= 0;j<cityList.length;j++)
+	{
+		//var city = cityList[j].name.toLowerCase();
+		//if(city==cities[i])
+			cityData.push(cityList[j]);
+	}
+
+var jvm_wm = new jvm.WorldMap({container: $('#dashboard-map-sales'),
+    map: 'asia_mill', 
+    backgroundColor: '#FFFFFF',                                      
+    regionsSelectable: true,
+    regionStyle: {selected: {fill: '#B64645'},
+                    initial: {fill: '#33414E'}},
+    markerStyle: {initial: {fill: '#3FBAE4',
+                   stroke: '#3FBAE4'}},
+    markers: cityData
+});
+	//End Map
+	
+	
+	
+	
+	/*
+    var toi = taffyData().filter({'source': 'TOI'}).count();
+	var fpj = taffyData().filter({'source': 'FPJ'}).count();
+	var bs = taffyData().filter({'source': 'Business Standard'}).count();
+	var ht = taffyData().filter({'source': 'Hindustan Times'}).count();
+	var it = taffyData().filter({'source': 'India Today'}).count();
+	 Morris.Donut({
+        element: 'dashboard-donut-12',
+        data: [
+            {label: "Times of India", value: toi},
+            {label: "FPJ", value: fpj},
+			{label: "Hindustan Times", value: ht},
+			{label: "India Today", value: it},
+            {label: "Business Standard", value: bs}
+        ],
+        colors: ['#33414E', '#3FBAE4', '#FEA223'],
+        resize: true
+    });*/
+	
+	Morris.Donut({
+        element: 'dashboard-donut-party',
+        data: partyData,
+        colors: ['#33414e', '#95b75d', '#3fbae4','#fea223','#b64645'],
+        resize: true
+    });
+	
+	
+	Morris.Bar({
+    element: 'morris-bar-cities',
+    data: [
+      {device: lData[0][0], geekbench: lData[0][1]},
+	  {device: lData[1][0], geekbench: lData[1][1]},
+	  {device: lData[2][0], geekbench: lData[2][1]},
+	  {device: lData[3][0], geekbench: lData[3][1]},
+	  {device: lData[4][0], geekbench: lData[4][1]}
+    ],
+    xkey: 'device',
+    ykeys: ['geekbench'],
+    labels: ['Count'],
+    barRatio: 0.4,
+    xLabelAngle: 35,
+    hideHover: 'auto',
+	barColors: function (row, series, type) {
+	if(row.label == lData[0][0]) return "#33414e";
+	else if(row.label == lData[1][0]) return "#95b75d";
+	else if(row.label == lData[2][0]) return "#3fbae4";
+	else if(row.label == lData[3][0]) return "#fea223";
+	else if(row.label == lData[4][0]) return "#b64645";
+}
+
+  });
+	
+	Morris.Bar({
+        element: 'morris-bar-example1',
+        data: [
+            { y: '2006', a: 100, b: 90 },
+            { y: '2007', a: 75,  b: 65 },
+            { y: '2008', a: 50,  b: 40 },
+            { y: '2009', a: 75,  b: 65 },
+            { y: '2010', a: 50,  b: 40 },
+            { y: '2011', a: 75,  b: 65 },
+            { y: '2012', a: 100, b: 90 }
+        ],
+        xkey: 'y',
+        ykeys: ['a', 'b'],
+        labels: ['Series A', 'Series B'],
+        barColors: ['#B64645', '#33414E']
+    }); 
+	
+		
+	});
+	
+function languageFilter(checkBoxValue){
+
+	//alert(checkBoxValue.value);
+	$("#newsDetails").html('');
+	$("#newsDetailsPagination").html('');
+	var langList = document.getElementById('dateFilterList');
+	var langs = langList.getElementsByTagName('input');
+	var count = 0;
+	
+	for (var j=0, len=langs.length; j<len; j++) {
+		if(langs[j].checked==true)
+		count++;
+	}
+	var sourceData;
+	var taffyData = TAFFY(newsData);
+if(langs[0].checked==true){
+	sourceData = '';
+		sourceData = taffyData().filter({'eventDate':['05/06/2019','05/05/2019']}).get();
+	}
+	if(langs[1].checked==true){
+	sourceData = '';
+		sourceData = taffyData().filter({'eventDate':['05/06/2019','05/05/2019','05/04/2019']}).get();
+	}
+	if(langs[2].checked==true){
+	sourceData = '';
+		sourceData = taffyData().filter({'eventDate':['05/06/2019','05/05/2019','05/04/2019','05/03/2019','05/02/2019','05/01/2019','04/30/2019']}).get();
+	}
+	//var sourceData = newsData;	
+		
+	if(count!=0)
+	{
+		filteredData = [];
+		$('#newsDetailsPagination').pagination({
+		dataSource: sourceData,
+		pageSize: 5,
+		className: 'custom-paginationjs',
+		callback: function(data, pagination) {
+			// template method of yourself
+			//var html = simpleTemplating(data);
+			//$('#tweetDetails').html(html);
+		$("#newsDetails").html('');
+			for (var i = 0; i < data.length; i++) 
+			{
+				//for (var j=0, len=langs.length; j<len; j++) {
+				
+				//if(langs[j].checked==true )
+				//{
+				    $("#newsDetails").append('<tr>'+
+					'<td><b>'+data[i]['title'] +'</b><br>' + data[i]['summary']+'<br><b>Event Type: </b>'+data[i]['eventType']+'<br><b>Parties Inolved: </b>'
+					+data[i]['partiesInvolved']+'<br><span class="label label-default label-form" style="background-color: #ffffff;color:black;border: 2px solid #bababa;border-radius: 12px""><span class="fa fa-calendar-o"></span> '+data[i]['eventDate']+'</span> '
+					+'<span class="label label-default label-form" style="background-color: #ffffff;color:black;border: 2px solid #bababa;border-radius: 12px"><span class="fa fa-map-marker"></span> '+data[i]['location']+'</span></td></tr><hr>');
+				   filteredData.push(data[i]);
+				//}
+				//}
+			}
+		}
+		})
+	}
+	else{
+		filteredData= {};
+		$('#newsDetailsPagination').pagination({
+		dataSource: newsData,
+		pageSize: 5,
+		callback: function(data, pagination) {
+			// template method of yourself
+			//var html = simpleTemplating(data);
+			//$('#tweetDetails').html(html);
+		$("#newsDetails").html('');
+		for (var i = 0; i < data.length; i++) 
+		{
+		$("#newsDetails").append('<tr>'+
+					'<td><b>'+data[i]['title'] +'</b><br>' + data[i]['summary']+'<br><b>Event Type: </b>'+data[i]['eventType']+'<br><b>Parties Inolved: </b>'
+					+data[i]['partiesInvolved']+'<br><span class="label label-default label-form" style="background-color: #ffffff;color:black;border: 2px solid #bababa;border-radius: 12px""><span class="fa fa-calendar-o"></span> '+data[i]['eventDate']+'</span> '
+					+'<span class="label label-default label-form" style="background-color: #ffffff;color:black;border: 2px solid #bababa;border-radius: 12px"><span class="fa fa-map-marker"></span> '+data[i]['location']+'</span></td></tr><hr>');
+
+		}
+		
+		}
+	});
+	}
+}
+	</script>
+	
+	
+    </body>
+	
+
+	
+</html>
+
+
+
+
+
+

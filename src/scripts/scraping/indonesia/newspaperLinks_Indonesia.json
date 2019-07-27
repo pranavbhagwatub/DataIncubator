@@ -1,0 +1,19 @@
+
+{
+
+"CNBC":{
+	"link": "https://www.cnbc.com/2019/01/21/indonesia-politics-religion-economy-key-to-widodos-re-election.html"
+},
+"Jakarta Post":{
+	"link": "https://www.thejakartapost.com/news/politics"
+},   
+"World News Report":{
+	"rss": "https://www.einnews.com/rss/T2tHVmwcBIBT0pom",
+	"link":"https://www.einnews.com/rss/T2tHVmwcBIBT0pom"
+},  
+"Lowy Institute":{
+	"link": "https://www.lowyinstitute.org/publications/politics-indonesia-resilient-elections-defective-democracy"
+},
+"Political Violence":{
+	"link": "https://politicalviolenceataglance.org/tag/indonesia/"
+}}

@@ -1,0 +1,26 @@
+{
+    "The Nation":{
+	"rss": "http://www.nationmultimedia.com/rss/politics.rss",
+	"link": "https://www.thenation.com/subject/politics/"
+}
+,
+
+    "Bangkok Post":{
+	"rss": "https://www.bangkokpost.com/rss/data/topstories.xml",
+	"link": "https://www.bangkokpost.com/news/politics"
+}
+
+,
+    "Khaosod English":{
+	"rss": "http://www.khaosodenglish.com/category/politics/feed/",
+	"link": "http://www.khaosodenglish.com/category/politics/"
+},
+	"Intellasia":{
+	"rss":"https://www.intellasia.net/category/thailand/feed",
+	"link":"https://www.intellasia.net/category/thailand/feed"
+},
+	"Thaiger":{
+	"rss":"https://thethaiger.com/feed",
+	"link":"https://thethaiger.com/feed"
+}    
+}

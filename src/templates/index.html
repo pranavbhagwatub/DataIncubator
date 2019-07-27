@@ -1,0 +1,509 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>        
+        <!-- META SECTION -->
+        <title>Shodh - Political event summarizer</title>            
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        
+        <link rel="icon" href="favicon.ico" type="image/x-icon" />
+        <!-- END META SECTION -->
+        
+        <!-- CSS INCLUDE -->        
+        <link rel="stylesheet" type="text/css" id="theme" href="static/css/theme-default.css"/>
+        <!-- EOF CSS INCLUDE -->                   
+    </head>
+    <body>
+        <div class="">
+            
+
+            
+            <!-- PAGE CONTENT -->
+            <div class="page-content" style="">
+                
+                <!-- START X-NAVIGATION VERTICAL -->
+                <ul class="x-navigation x-navigation-horizontal ">
+                    
+                </ul>
+                <!-- END X-NAVIGATION VERTICAL -->                     
+
+                 
+                
+                <!-- PAGE CONTENT WRAPPER -->
+                <div class="page-content-wrap" style="padding-top:5%">
+                    
+					<div class="row">
+						<div class="col-md-4">
+                            <!-- START WIDGET SLIDER -->
+                            <div class="widget widget-default widget-carousel">
+                                <div class="owl-carousel" id="owl-example">
+                                    <div>                                    
+                                        <div class="widget-title">India</div>                                                                        
+                                        <div class="widget-subtitle">Riots</div>
+                                        <div class="widget-int"><span id="indRiots"></span></div>
+                                    </div>
+                                    <div>                                    
+                                        <div class="widget-title">India</div>                                                                        
+                                        <div class="widget-subtitle">Protests</div>
+                                        <div class="widget-int"><span id="indProtests"></span></div>
+                                    </div>
+                                    <div>                                    
+                                        <div class="widget-title">India</div>                                                                        
+                                        <div class="widget-subtitle">Violence Against Civilians</div>
+                                        <div class="widget-int"><span id="indViolence"></span></div>
+                                    </div>
+                                </div>                            
+                                <div class="widget-controls">                                
+                                    <a href="#" class="widget-control-right widget-remove" data-toggle="tooltip" data-placement="top" title="Remove Widget"><span class="fa fa-times"></span></a>
+                                </div>                             
+                            </div>         
+                            <!-- END WIDGET SLIDER -->
+                        </div>
+						<div class="col-md-4">
+                            <!-- START WIDGET SLIDER -->
+                            <div class="widget widget-default widget-carousel">
+                                <div class="owl-carousel" id="owl-example">
+                                    <div>                                    
+                                        <div class="widget-title">Indonesia</div>                                                                        
+                                        <div class="widget-subtitle">Riots</div>
+                                        <div class="widget-int"><span id="inzRiots"></span></div>
+                                    </div>
+                                    <div>                                    
+                                        <div class="widget-title">Indonesia</div>                                                                        
+                                        <div class="widget-subtitle">Protests</div>
+                                        <div class="widget-int"><span id="inzProtests"></span></div>
+                                    </div>
+                                    <div>                                    
+                                        <div class="widget-title">Indonesia</div>                                                                        
+                                        <div class="widget-subtitle">Violence Against Civilians</div>
+                                        <div class="widget-int"><span id="inzViolence"></span></div>
+                                    </div>
+                                </div>                            
+                                <div class="widget-controls">                                
+                                    <a href="#" class="widget-control-right widget-remove" data-toggle="tooltip" data-placement="top" title="Remove Widget"><span class="fa fa-times"></span></a>
+                                </div>                             
+                            </div>         
+                            <!-- END WIDGET SLIDER -->
+                        </div>
+						<div class="col-md-4">
+                            <!-- START WIDGET SLIDER -->
+                            <div class="widget widget-default widget-carousel">
+                                <div class="owl-carousel" id="owl-example">
+                                    <div>                                    
+                                        <div class="widget-title">Thailand</div>                                                                        
+                                        <div class="widget-subtitle">Riots</div>
+                                        <div class="widget-int"><span id="thRiots"></span></div>
+                                    </div>
+                                    <div>                                    
+                                        <div class="widget-title">Thailand</div>                                                                        
+                                        <div class="widget-subtitle">Protests</div>
+                                        <div class="widget-int"><span id="thProtests"></span></div>
+                                    </div>
+                                    <div>                                    
+                                        <div class="widget-title">Thailand</div>                                                                        
+                                        <div class="widget-subtitle">Violence Against Civilians</div>
+                                        <div class="widget-int"><span id="thViolence"></span></div>
+                                    </div>
+                                </div>                            
+                                <div class="widget-controls">                                
+                                    <a href="#" class="widget-control-right widget-remove" data-toggle="tooltip" data-placement="top" title="Remove Widget"><span class="fa fa-times"></span></a>
+                                </div>                             
+                            </div>         
+                            <!-- END WIDGET SLIDER -->
+                        </div>
+					</div>
+					
+                    
+                    <div class="row">
+						    
+                        <div class="col-md-4">
+                            <!-- START SALES BLOCK -->
+                            <div class="panel panel-default">
+                                <div class="panel-heading">
+                                    <div class="panel-title-box">
+                                        <h3>Distribution by Country</h3>
+                                    </div>                                     
+                                    <ul class="panel-controls panel-controls-title">                                        	                                
+                                        <li><a href="#" class="panel-fullscreen rounded"><span class="fa fa-expand"></span></a></li>
+										<li><a href="#" class="panel-collapse"><span class="fa fa-angle-down"></span></a></li>
+                                    </ul>                                    
+                                    
+                                </div>
+                                <div class="panel-body">                                    
+                                    <div class="row stacked">
+										<!--
+                                        <div class="col-md-12">
+                                            <div id="morris-bar-cities" style="width: 100%; height: 200px"></div>
+                                        </div>-->
+										<div class="panel-body padding-0">
+												<div class="chart-holder" id="dashboard-donut-12" style="height: 200px;"></div>
+										</div>
+                                    </div>                                    
+                                </div>
+                            </div>
+                            <!-- END SALES BLOCK -->
+                            <!-- START VISITORS BLOCK -->
+               
+                            <!-- END VISITORS BLOCK -->
+                            
+                        </div>
+						<div class="col-md-4">
+                            <!-- START SALES BLOCK -->
+                            <!--div class="panel panel-default">
+                                <div class="panel-heading">
+                                    <div class="panel-title-box">
+                                        <h3>Tweets Distribution by City</h3>
+                                    </div>                                     
+                                    <ul class="panel-controls panel-controls-title">                                        	                                
+                                        <li><a href="#" class="panel-fullscreen rounded"><span class="fa fa-expand"></span></a></li>
+										<li><a href="#" class="panel-collapse"><span class="fa fa-angle-down"></span></a></li>
+                                    </ul>                                    
+                                    
+                                </div>
+                                <div class="panel-body">                                    
+                                    <div class="row stacked">
+                                        <div class="col-md-12">
+                                            <div id="dashboard-map-sales" style="width: 100%; height: 200px"></div>
+                                        </div>
+                                        <div class="col-md-12">
+                                            <div id="morris-bar-cwities" style="width: 100%; height: 200px"></div>
+                                        </div>
+                                    </div>                                    
+                                </div>
+                            </div-->
+							
+							<div class="panel panel-default">
+                                <div class="panel-heading">
+                                    <div class="panel-title-box">
+                                        <h3>Distribution by Event Types</h3>
+                                    </div>                                     
+                                    <ul class="panel-controls panel-controls-title">                                        	                                
+                                        <li><a href="#" class="panel-fullscreen rounded"><span class="fa fa-expand"></span></a></li>
+										<li><a href="#" class="panel-collapse"><span class="fa fa-angle-down"></span></a></li>
+                                    </ul>                                    
+                                    
+                                </div>
+                                <div class="panel-body">                                    
+                                    <div class="row stacked">
+                                        <div class="col-md-12">
+                                            <div id="morris-bar-cities" style="width: 100%; height: 200px"></div>
+                                        </div>
+                                    </div>                                    
+                                </div>
+                            </div>
+                            <!-- END SALES BLOCK -->
+                            <!-- START VISITORS BLOCK -->
+               
+                            <!-- END VISITORS BLOCK -->
+                            
+                        </div>
+						<div class="col-md-4">
+                            <!-- START SALES BLOCK -->
+                            <div class="panel panel-default">
+                                <div class="panel-heading">
+                                    <div class="panel-title-box">
+                                        <h3>Events Timeline</h3>
+                                    </div>                                     
+                                    <ul class="panel-controls panel-controls-title">                                        	                                
+                                        <li><a href="#" class="panel-fullscreen rounded"><span class="fa fa-expand"></span></a></li>
+										<li><a href="#" class="panel-collapse"><span class="fa fa-angle-down"></span></a></li>
+                                    </ul>                                    
+                                    
+                                </div>
+                                <div class="panel-body">                                    
+                                    <div class="row stacked">
+                                        <div class="col-md-12">
+                                            <div id="morris-line-example" style="height: 300px;"></div>
+                                        </div>
+                                    </div>                                    
+                                </div>
+                            </div>
+                            <!-- END SALES BLOCK -->
+                            <!-- START VISITORS BLOCK -->
+               
+                            <!-- END VISITORS BLOCK -->
+                            
+                        </div>
+                    </div>
+
+                    
+                    <!-- START DASHBOARD CHART -->
+               
+                    <!-- END DASHBOARD CHART -->
+                    
+                </div>
+                <!-- END PAGE CONTENT WRAPPER -->                                
+            </div>            
+            <!-- END PAGE CONTENT -->
+        </div>        <!-- END PAGE CONTAINER -->
+
+        <!-- MESSAGE BOX-->
+        <div class="message-box animated fadeIn" data-sound="alert" id="mb-signout">
+            <div class="mb-container">
+                <div class="mb-middle">
+                    <div class="mb-title"><span class="fa fa-sign-out"></span> Log <strong>Out</strong> ?</div>
+                    <div class="mb-content">
+                        <p>Are you sure you want to log out?</p>                    
+                        <p>Press No if youwant to continue work. Press Yes to logout current user.</p>
+                    </div>
+                    <div class="mb-footer">
+                        <div class="pull-right">
+                            <a href="pages-login.html" class="btn btn-success btn-lg">Yes</a>
+                            <button class="btn btn-default btn-lg mb-control-close">No</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- END MESSAGE BOX-->
+
+        <!-- START PRELOADS -->
+        <audio id="audio-alert" src="static/audio/alert.mp3" preload="auto"></audio>
+        <audio id="audio-fail" src="static/audio/fail.mp3" preload="auto"></audio>
+        <!-- END PRELOADS -->                  
+        
+    <!-- START SCRIPTS -->
+        <!-- START PLUGINS -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script type="text/javascript" src="static/js/plugins/bootstrap/bootstrap.min.js"></script>        
+        <!-- END PLUGINS -->
+
+        <!-- START THIS PAGE PLUGINS-->        
+        <script type='text/javascript' src='static/js/plugins/icheck/icheck.min.js'></script>        
+        <script type="text/javascript" src="static/js/plugins/mcustomscrollbar/jquery.mCustomScrollbar.min.js"></script>
+        <script type="text/javascript" src="static/js/plugins/scrolltotop/scrolltopcontrol.js"></script>
+        
+        <script type="text/javascript" src="static/js/plugins/morris/raphael-min.js"></script>
+        <script type="text/javascript" src="static/js/plugins/morris/morris.min.js"></script>       
+        <script type="text/javascript" src="static/js/plugins/rickshaw/d3.v3.js"></script>
+        <script type="text/javascript" src="static/js/plugins/rickshaw/rickshaw.min.js"></script>
+        <script type='text/javascript' src='static/js/plugins/jvectormap/jquery-jvectormap-1.2.2.min.js'></script>
+        <script type='text/javascript' src='static/js/plugins/jvectormap/jquery-jvectormap-world-mill-en.js'></script>                
+        <script type='text/javascript' src='static/js/plugins/bootstrap/bootstrap-datepicker.js'></script>                
+        <script type="text/javascript" src="static/js/plugins/owl/owl.carousel.min.js"></script>                 
+        
+        <script type="text/javascript" src="static/js/plugins/moment.min.js"></script>
+        <script type="text/javascript" src="static/js/plugins/daterangepicker/daterangepicker.js"></script>
+        <!-- END THIS PAGE PLUGINS-->        
+
+        <!-- START TEMPLATE -->
+        <script type="text/javascript" src="static/js/settings.js"></script>
+        
+        <script type="text/javascript" src="static/js/plugins.js"></script>        
+        <script type="text/javascript" src="static/js/actions.js"></script>
+        
+        <script type="text/javascript" src="static/js/demo_dashboard.js"></script>
+		<script type="text/javascript" src="static/js/taffy.js"></script>
+        <!-- END TEMPLATE -->
+    <!-- END SCRIPTS -->         
+	
+	<script type="text/javascript">
+	$(document).ready(function(){
+	var s = '{{data|tojson|safe}}';
+	var srcCount = '{{sData|tojson|safe}}';
+	var serData = '{{seriesData|tojson|safe}}';
+	var eventCount = '{{eventCount|tojson|safe}}';
+	var countryCount = '{{countryData|tojson|safe}}';
+	var tickerData = '{{tickerData|tojson|safe}}';
+	// preserve newlines, etc - use valid JSON
+	s = s.replace(/\\n/g, "\\n")  
+				   .replace(/\\'/g, "\\'")
+				   .replace(/\\"/g, '\\"')
+				   .replace(/\\&/g, "\\&")
+				   .replace(/\\r/g, "\\r")
+				   .replace(/\\t/g, "\\t")
+				   .replace(/\\b/g, "\\b")
+				   .replace(/\\f/g, "\\f");
+	// remove non-printable and other non-valid JSON chars
+	s = s.replace(/[\u0000-\u0019]+/g,""); 
+	var jd = JSON.stringify(s);
+	var jData = JSON.parse(jd);
+	
+	
+	//ticker data
+	
+	tickerData = tickerData.replace(/\\n/g, "\\n")  
+				   .replace(/\\'/g, "\\'")
+				   .replace(/\\"/g, '\\"')
+				   .replace(/\\&/g, "\\&")
+				   .replace(/\\r/g, "\\r")
+				   .replace(/\\t/g, "\\t")
+				   .replace(/\\b/g, "\\b")
+				   .replace(/\\f/g, "\\f");
+	// remove non-printable and other non-valid JSON chars
+	tickerData = tickerData.replace(/[\u0000-\u0019]+/g,""); 
+	//var tickerD = JSON.stringify(tickerData);
+	var tiData = JSON.parse(tickerData);
+	
+	document.getElementById("indRiots").innerHTML = tiData[0]["Riots"];
+	document.getElementById("indProtests").innerHTML = tiData[0]["Protests"];
+	document.getElementById("indViolence").innerHTML = tiData[0]["ViolenceCivilians"];
+	
+	document.getElementById("inzRiots").innerHTML = tiData[1]["Riots"];
+	document.getElementById("inzProtests").innerHTML = tiData[1]["Protests"];
+	document.getElementById("inzViolence").innerHTML = tiData[1]["ViolenceCivilians"];
+	
+	document.getElementById("thRiots").innerHTML = tiData[2]["Riots"];
+	document.getElementById("thProtests").innerHTML = tiData[2]["Protests"];
+	document.getElementById("thViolence").innerHTML = tiData[2]["ViolenceCivilians"];
+	
+	//ticker end
+	
+	
+	var taffyData = TAFFY(jData);
+    var toi = taffyData().filter({'source': 'TOI'}).count();
+	var fpj = taffyData().filter({'source': 'FPJ'}).count();
+	var bs = taffyData().filter({'source': 'Business Standard'}).count();
+	var ht = taffyData().filter({'source': 'Hindustan Times'}).count();
+	var it = taffyData().filter({'source': 'India Today'}).count();
+	
+	
+	countryCount = countryCount.replace(/\\n/g, "\\n")  
+				   .replace(/\\'/g, "\\'")
+				   .replace(/\\"/g, '\\"')
+				   .replace(/\\&/g, "\\&")
+				   .replace(/\\r/g, "\\r")
+				   .replace(/\\t/g, "\\t")
+				   .replace(/\\b/g, "\\b")
+				   .replace(/\\f/g, "\\f");
+	// remove non-printable and other non-valid JSON chars
+	countryCount = countryCount.replace(/[\u0000-\u0019]+/g,""); 
+	//var cd = JSON.stringify(countryCount);
+	var countryData = JSON.parse(countryCount);
+	
+	
+	 Morris.Donut({
+        element: 'dashboard-donut-12',
+        data: [
+            {label: countryData[0]["country"], value: countryData[0]["cnt"]},
+            {label: countryData[1]["country"], value: countryData[1]["cnt"]},
+			{label: countryData[2]["country"], value: countryData[2]["cnt"]}
+        ],
+        colors: ['#33414E', '#3FBAE4', '#FEA223'],
+        resize: true
+    });
+	
+	
+	//Times series
+	eventCount = eventCount.replace(/\\n/g, "\\n")  
+				   .replace(/\\'/g, "\\'")
+				   .replace(/\\"/g, '\\"')
+				   .replace(/\\&/g, "\\&")
+				   .replace(/\\r/g, "\\r")
+				   .replace(/\\t/g, "\\t")
+				   .replace(/\\b/g, "\\b")
+				   .replace(/\\f/g, "\\f")
+				   .replace(/[\u0000-\u0019]+/g,""); 
+
+	var eventd = JSON.stringify(eventCount);
+	var eventData = JSON.parse(JSON.parse(eventd));
+	
+	Morris.Bar({
+    element: 'morris-bar-cities',
+    data: [
+      {device: eventData[0]["eventType"], geekbench: eventData[0]["cnt"]},
+      {device: eventData[1]["eventType"], geekbench: eventData[1]["cnt"]},
+      {device: eventData[2]["eventType"], geekbench: eventData[2]["cnt"]},
+      {device: eventData[3]["eventType"], geekbench: eventData[3]["cnt"]}
+    ],
+    xkey: 'device',
+    ykeys: ['geekbench'],
+    labels: ['Count'],
+    barRatio: 0.4,
+    xLabelAngle: 35,
+    hideHover: 'auto',
+	barColors: function (row, series, type) {
+	if(row.label == eventData[0]["eventType"]) return "#AD1D28";
+	else if(row.label == eventData[1]["eventType"]) return "#33414e";
+	else if(row.label == eventData[2]["eventType"]) return "#fec04c";
+	else if(row.label == eventData[3]["eventType"]) return "#1AB244";
+	//else if(row.label == "Paris") return "#34495E";
+}
+
+  });
+	//Times series
+	serData = serData.replace(/\\n/g, "\\n")  
+				   .replace(/\\'/g, "\\'")
+				   .replace(/\\"/g, '\\"')
+				   .replace(/\\&/g, "\\&")
+				   .replace(/\\r/g, "\\r")
+				   .replace(/\\t/g, "\\t")
+				   .replace(/\\b/g, "\\b")
+				   .replace(/\\f/g, "\\f")
+				   .replace(/[\u0000-\u0019]+/g,""); 
+
+	var ld = JSON.stringify(serData);
+	var locData = JSON.parse(JSON.parse(ld));
+	
+	var tmData = {};
+	var newobj = {
+    json: {}
+	};
+	for(var i in locData) {
+		var x = locData[i];
+		var dt = new Date(x.eventDate).toISOString().slice(0,10);//.toString().split('-');
+		//var dateStr = (dt[1]+'-'+dt[2]+'-'+dt[0]).toString();
+		//var dateStr = new Date(dt[0],dt[1],dt[2]).toString().slice(0,10);
+		tmData[i] = { y: dt, a: x.Protests, b:x.Riots, c:x.ViolenceCivilians };
+	}
+	
+	/*var s = '04/15/2019';
+	var d = new Date(s).toISOString().slice(0,10);
+	alert(d);*/
+	
+	var xt = [
+            { y: tmData[0].y, a: tmData[0].a,b: tmData[0].b,c: tmData[0].c},
+            { y: tmData[1].y, a: tmData[1].a,b: tmData[1].b,c: tmData[1].c},
+			{ y: tmData[2].y, a: tmData[2].a,b: tmData[2].b,c: tmData[2].c},
+			{ y: tmData[3].y, a: tmData[3].a,b: tmData[3].b,c: tmData[3].c},
+			{ y: tmData[4].y, a: tmData[4].a,b: tmData[4].b,c: tmData[4].c},
+			{ y: tmData[5].y, a: tmData[5].a,b: tmData[5].b,c: tmData[5].c},
+			{ y: tmData[6].y, a: tmData[6].a,b: tmData[6].b,c: tmData[6].c},
+        ];
+  Morris.Line({
+      element: 'morris-line-example',
+      data: xt,
+      xkey: 'y',
+      ykeys: ['a','b','c'],
+      labels: ['Protests','Riots','Violence Against Civilians'],
+	  hideHover: 'auto',
+	  xLabel:"day",
+      resize: true,
+      lineColors: ['#33414e','#95b75d','#fea223']
+    });
+
+	Morris.Bar({
+        element: 'morris-bar-example1',
+        data: [
+			{ y: tmData[0].y, a: tmData[0].a},
+            { y: tmData[1].y, a: tmData[1].a},
+			{ y: tmData[2].y, a: tmData[2].a},
+			{ y: tmData[3].y, a: tmData[3].a},
+			{ y: tmData[4].y, a: tmData[4].a},
+			{ y: tmData[5].y, a: tmData[5].a},
+			{ y: tmData[6].y, a: tmData[6].a},
+			{ y: tmData[7].y, a: tmData[7].a}
+        ],
+        xkey: 'y',
+        ykeys: ['a', 'b'],
+        labels: ['Series A', 'Series B'],
+        barColors: ['#B64645', '#33414E']
+    }); 
+	
+		
+	});
+	</script>
+	
+	
+    </body>
+	
+
+	
+</html>
+
+
+
+
+
+

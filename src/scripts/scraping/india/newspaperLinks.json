@@ -1,0 +1,23 @@
+{
+    "TOI":{
+	"rss": "https://timesofindia.indiatimes.com/rssfeeds/-2128936835.cms",
+	"link":"https://timesofindia.indiatimes.com/elections/news"
+},
+    "Hindustan Times":{
+	"rss": "https://www.hindustantimes.com/rss/india/rssfeed.xml",
+	"link":"https://www.hindustantimes.com/"
+},
+    "India Today":{
+	"rss": "https://www.indiatoday.in/rss/1206578",
+	"link": "https://indianexpress.com/?s=politics"
+},
+    "FPJ":{
+	"rss": "https://www.freepressjournal.in/feed",
+	"link": "https://www.news18.com/politics/?ref=topnav"
+},
+    "Business Standard":{
+	"rss": "https://www.business-standard.com/rss/latest.rss",
+	"link": "https://www.business-standard.com/lok-sabha-elections-2019"
+}
+
+}
